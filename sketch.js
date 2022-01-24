@@ -4,7 +4,7 @@ var yPos = 200;  // starting y position to draw
 
 let img;
 function preload() {
-  img = loadImage('bee.png');
+  img = loadImage('m_bee.png');
 }
 
 //this gets called only once in the very beginning
