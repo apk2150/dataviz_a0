@@ -5,6 +5,7 @@ var yPos = 200;  // starting y position to draw
 let img;
 function preload() {
   img = loadImage('m_bee.png');
+ 
 }
 
 //this gets called only once in the very beginning
@@ -18,18 +19,19 @@ function draw() {
   var m = map(minute(), 0, 60, 0, TWO_PI)- HALF_PI;
   var s = map(second(), 0, 60, 0, TWO_PI) - HALF_PI; 
   strokeWeight(5);
-  if (hour()<8){
+  //dark background at night
+  if (hour()<7){
+    background(10, 60, 140);
+  }
+  else if(hour()>18){
+    background(10, 60, 140);
+   
+  }
+  else{
     background(218, 246, 255);
   }
-else if (h>18){
-	background(218, 246, 255);
-}
-	
-  else{
-    background(0, 83, 172);
-  }
   
-  background(218, 246, 255);
+  
   fill(255, 0, 0);
   
   stroke(147, 235, 84);
@@ -69,14 +71,13 @@ else if (h>18){
   push();
   translate(xPos, yPos);
   imageMode(CENTER);
-
-//   circle((cos(s) * 130), (sin(s) * 130), 25);
-     image(img,(cos(s) * 130), (sin(s) * 130), 25, 25);
+ 
+  image(img,(cos(s) * 130), (sin(s) * 130), 25, 25);
  
   pop();
   
   if (second()==0){
-    print(minute());
+    console.log(minute());
   }
   
   
