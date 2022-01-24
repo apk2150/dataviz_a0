@@ -18,9 +18,13 @@ function draw() {
   var m = map(minute(), 0, 60, 0, TWO_PI)- HALF_PI;
   var s = map(second(), 0, 60, 0, TWO_PI) - HALF_PI; 
   strokeWeight(5);
-  if (hour()>8 & hour()<18){
+  if (hour()<8){
     background(218, 246, 255);
   }
+else if (h>18){
+	background(218, 246, 255);
+}
+	
   else{
     background(0, 83, 172);
   }
