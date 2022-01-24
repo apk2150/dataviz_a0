@@ -2,10 +2,10 @@ var xPos = 400; // starting x position to draw
 var yPos = 200;  // starting y position to draw
 
 
-// let img;
-// function preload() {
-//   img = loadImage('bee.png');
-// }
+let img;
+function preload() {
+  img = loadImage('bee.png');
+}
 
 //this gets called only once in the very beginning
 function setup() {
@@ -66,9 +66,8 @@ function draw() {
   translate(xPos, yPos);
   imageMode(CENTER);
 
-  circle((cos(s) * 130), (sin(s) * 130), 25);
- 
-//    image(img,(cos(s) * 130), (sin(s) * 130), 25, 25);
+//   circle((cos(s) * 130), (sin(s) * 130), 25);
+     image(img,(cos(s) * 130), (sin(s) * 130), 25, 25);
  
   pop();
   
